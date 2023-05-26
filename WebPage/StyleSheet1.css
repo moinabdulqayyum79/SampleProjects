@@ -1,0 +1,21 @@
+﻿.center {
+    /*width:50%;
+    height:100%;
+    display:flex;
+    align-content:center;
+    justify-content:center;
+    margin:0;
+    text-align:center;*/
+    margin: 0;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family:Arial;
+    background-color: bisque;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
