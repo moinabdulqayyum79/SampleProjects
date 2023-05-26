@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quantico:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap");
+
+:root {
+  --lighter_grey: #bbb;
+  --light: #fff;
+  --dark: #000;
+  --gunmetal: #233c44;
+  --lightstblue: #726c8d;
+  --gainsboro: #dae3e5;
+  --columbiaBlue: #ceeaf7;
+  --Isabelline: #eeebe6;
+}
+
+body {
+  animation-name: siteLoad;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  font-family: "Crimson Pro", serif;
+  font-size: 1.2rem;
+}
+
+.brand-div > h1 {
+  font-family: "Rock Salt", cursive;
+  font-size: 2rem;
+  text-align: left;
+  padding-left: 3rem;
+}
+
+.brandcolor {
+  text-decoration: none;
+  color: var(--Isabelline);
+}
+
+footer {
+  display: flex; /* This element is a container */
+  justify-content: center; /* Put child elements at the center of this container's main axis */
+  padding: 1em 0;
+  color: var(--Isabelline);
+  text-align: center;
+  background-color: var(--gunmetal);
+  bottom: 0;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+}
+
+nav {
+  display: flex; /* This element is a container */
+  flex-flow: row nowrap; /* This element is now a row and does not wrap */
+  justify-content: space-between; /* Put the elements at the start of the container (row) */
+  margin: 1em;
+  background-color: var(--gunmetal);
+  color: var(--Isabelline);
+  border-radius: 1rem;
+}
+
+
+/* img {
+  display: block;
+  margin-left: auto;
+  margin-right: 4rem;
+  width: 60%;
+  background-position: center;
+} */
+
+/* Buttons and Links */
+nav a {
+  border-radius: 0.5em; /*rounded corners */
+  text-align: center; /* Align the text to the center of its container's xd axis*/
+  text-decoration: none; /* remove the underline */
+  color: var(--Isabelline);
+  font-family: "Quantico", sans-serif;
+}
+
+/** hover hyperlinks in the nav and hovering buttons **/
+nav a:hover {
+  color: var(--lightstblue);
+  border-radius: 0.5em; /*rounded corners */
+}
+
+/* Unordered lists that are children of nav elements */
+nav > ul {
+  display: flex; /* This element is a container */
+  flex-flow: row nowrap; /* This element is now a column and does not wrap */
+  align-items: center;
+}
+
+/* list items that are descendants of unordered lists
+   when those unordered lists are descendaants of the nav element */
+nav ul li {
+  padding: 0rem 4rem 0rem 0.5rem;
+}
+
+.mainIndex {
+  /*Image taken from: https://unsplash.com/photos/LBNJi8qHIbA */
+  background-image: url(../images/gifts.jpg);
+  background-size: cover;
+  height: 40rem;
+  margin-left: auto;
+  width: 60%;
+}
+
+.slogan {
+  animation-name: fade;
+  animation-delay: 0.5s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  font-family: "Quantico", sans-serif;
+  font-size: 2.4rem;
+  left: -100%;
+  padding-top: 6rem;
+  position: relative;
+  width: 20%;
+}
+
+@keyframes siteLoad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fade {
+  0% {
+    left: -60%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    left: -25vw;
+    opacity: 100%;
+  }
+}

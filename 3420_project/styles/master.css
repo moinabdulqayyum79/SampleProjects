@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap");
+
+:root {
+  --lighter_grey: #bbb;
+  --light: #fff;
+  --dark: #000;
+  --gunmetal: #233c44;
+  --lightstblue: #726c8d;
+  --gainsboro: #dae3e5;
+  --columbiaBlue: #ceeaf7;
+  --Isabelline: #eeebe6;
+}
+
+body {
+  animation-name: siteLoad;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  font-family: "Crimson Pro", serif;
+  font-size: 1.2rem;
+  background-image: url("");
+}
+
+/* setting the form and the div that contains it */
+.div-form {
+  display: flex;
+  justify-content: center;
+}
+form {
+  display: flex;
+  background-color: var(--Isabelline);
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 0.4rem;
+  width: 40rem;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+}
+form>div{
+  margin-bottom: 1rem;
+}
+/* divs that contain the inputs */
+.input{
+  display: flex;
+  position: relative;
+}
+
+/** Positioning the icons **/
+.fa-solid {
+  position: absolute;
+  align-self: center;
+  left: 0.2rem;
+  font-size: 1.1rem;
+  color: var(--lighter_grey);
+}
+
+/** Setting the following properties to the input user-credential textbox **/
+form input:not(.check-box) {
+  color: var(--lighter_grey);
+  border: none;
+  width: 100%;
+  padding: 0.8rem 1.7rem 0.8rem;
+  border-radius: 0.2rem;
+}
+/* expiry is a readonly input that should stay dark */
+#expiry{
+  color: var(--dark);
+}
+textarea{
+  width: 100%;
+  color: var(--lighter_grey);
+}
+
+/** Setting the following properties to the input textbox when the mouse is focused on it **/
+form input:focus{
+  color: var(--dark);
+  outline: solid var(--gunmetal) 0.15rem;
+}
+form input:focus +.fa-solid{
+  color: var(--gunmetal);
+}
+textarea:focus{
+  color: var(--dark);
+  outline: solid var(--gunmetal) 0.15rem;
+}
+/* errors and updates */
+.error {color: red;}
+.update{
+  color: green;
+  font-weight: 700;
+}
+
+a:hover {color: var(--dark);}
+/* all the buttons */
+button{
+  margin: 1rem 0;
+  color: white;
+  background-image: linear-gradient(
+    90deg,
+    var(--gunmetal) 0%,
+    var(--lightstblue) 100%
+  );
+  border-radius: 1.5rem;
+  padding: 0.8rem;
+  border: none;
+  font-size: 1.2rem;
+}
+#deleteaccount button{
+  background-image: none;
+  background-color: red;
+}
+.psw {
+  text-align: right;
+}
+form .brand-div > h1 {
+  font-family: "Rock Salt", cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.brandcolor {
+  text-decoration: none;
+  color: var(--gunmetal);
+}
+
+
+nav {
+    display: flex; /* This element is a container */
+    flex-flow: row nowrap; /* This element is now a row and does not wrap */
+    justify-content: space-between; /* Put the elements at the start of the container (row) */
+    margin: 1em;
+    background-color: var(--gunmetal);
+    color: var(--Isabelline);
+    border-radius: 1rem;
+  }
+  
+  
+  /* img {
+    display: block;
+    margin-left: auto;
+    margin-right: 4rem;
+    width: 60%;
+    background-position: center;
+  } */
+  
+  /* Buttons and Links */
+  nav a {
+    border-radius: 0.5em; /*rounded corners */
+    text-align: center; /* Align the text to the center of its container's xd axis*/
+    text-decoration: none; /* remove the underline */
+    color: var(--Isabelline);
+    font-family: "Quantico", sans-serif;
+  }
+  
+  /** hover hyperlinks in the nav and hovering buttons **/
+  nav a:hover {
+    color: var(--lightstblue);
+    border-radius: 0.5em; /*rounded corners */
+  }
+  
+  /* Unordered lists that are children of nav elements */
+  nav > ul {
+    display: flex; /* This element is a container */
+    flex-flow: row nowrap; /* This element is now a column and does not wrap */
+    align-items: center;
+  }
+  
+  /* list items that are descendants of unordered lists
+     when those unordered lists are descendaants of the nav element */
+  nav ul li {
+    padding: 0rem 4rem 0rem 0.5rem;
+  }
+  
+
+@keyframes siteLoad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
